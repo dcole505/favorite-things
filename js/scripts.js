@@ -12,11 +12,12 @@ $(document).ready(function(){
 
     moddedArray.push(inputArray[1], inputArray[0], inputArray[2]);
 
-    $("#original").append("<li>" + inputArray[0] + "</li>");
-    $("#original").append("<li>" + inputArray[1] + "</li>");
-    $("#original").append("<li>" + inputArray[2] + "</li>");
-    $("#original").append("<li>" + inputArray[3] + "</li>");
-    $("#original").append("<li>" + inputArray[4] + "</li>");
-    $("#original").append("<li>" + inputArray[5] + "</li>");
+    inputArray.forEach(function(answer){
+      $("#original").append("<li>" + answer + "</li>");
+    });
+
+    moddedArray.forEach(function(answer){
+      $("#modified").append("<li>" + answer + "</li>");
+    });
   });
 });
